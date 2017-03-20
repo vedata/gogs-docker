@@ -1,0 +1,17 @@
+postgres:
+   image: sameersbn/postgresql:9.4-4
+   ports: 
+      - "5432:5432"
+   environment:
+      - DB_USER=admin
+      - DB_PASS=admin
+      - DB_NAME=gogs
+
+gogs-docker:
+   build: .
+   ports:
+      - "3000:3000"
+   environment:
+      - USER=vk
+   links:
+      - postgres:postgres
