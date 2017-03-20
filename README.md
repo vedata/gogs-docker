@@ -19,4 +19,5 @@ This repository provides a gogs application based on postgres.
 
 ## Alternatively run docker compose 
 
-   1. docker-compose up
+   1. git clone https://github.com/vedata/gogs-docker.git
+   2. docker-compose up
